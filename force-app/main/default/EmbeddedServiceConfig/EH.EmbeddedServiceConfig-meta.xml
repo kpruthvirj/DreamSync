@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmbeddedServiceConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areGuestUsersAllowed>false</areGuestUsersAllowed>
+    <branding>EmbeddedServiceConfig_BrandingSet_1a072323d3e</branding>
+    <deploymentFeature>EmbeddedMessaging</deploymentFeature>
+    <deploymentType>Web</deploymentType>
+    <embeddedServiceMessagingChannel>
+        <embdMsgChannelInvitationConditions>
+            <conditionType>UrlMatch</conditionType>
+            <operand>Contains</operand>
+            <sequence>1</sequence>
+            <value>https://orgfarm-22349fde76.my.site.com</value>
+        </embdMsgChannelInvitationConditions>
+        <formula>1</formula>
+        <isChatInvitationCustomizable>true</isChatInvitationCustomizable>
+        <isEnabled>true</isEnabled>
+        <isInvitationEnabled>true</isInvitationEnabled>
+        <isSendInvtAllowedAfterAccept>true</isSendInvtAllowedAfterAccept>
+        <isSendInvtAllowedAfterReject>false</isSendInvtAllowedAfterReject>
+        <messagingChannel>Earthique_Web</messagingChannel>
+        <shouldShowAgentforceTagline>true</shouldShowAgentforceTagline>
+        <shouldShowDeliveryReceipts>true</shouldShowDeliveryReceipts>
+        <shouldShowEmojiSelection>true</shouldShowEmojiSelection>
+        <shouldShowReadReceipts>true</shouldShowReadReceipts>
+        <shouldShowTypingIndicators>true</shouldShowTypingIndicators>
+        <shouldStartNewLineOnEnter>false</shouldStartNewLineOnEnter>
+    </embeddedServiceMessagingChannel>
+    <isEnabled>true</isEnabled>
+    <isTermsAndConditionsEnabled>false</isTermsAndConditionsEnabled>
+    <isTermsAndConditionsRequired>false</isTermsAndConditionsRequired>
+    <masterLabel>EH</masterLabel>
+    <shouldHideAuthDialog>false</shouldHideAuthDialog>
+    <site>ESW_EH_17886222367291</site>
+</EmbeddedServiceConfig>

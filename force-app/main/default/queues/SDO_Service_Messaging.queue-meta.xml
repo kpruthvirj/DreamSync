@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Messaging</name>
+    <queueMembers>
+        <users>
+            <user>dhemrajani@deloitte.com_df</user>
+            <user>ivy@00dfj00000cqpba1411330612.ext</user>
+            <user>agent_ivy@00dfj00000cqpba1271438020.ext</user>
+            <user>agent_ivy@00dfj00000cqpba114206619.ext</user>
+            <user>voiceassistancetest@00dfj00000cqpba144452815.ext</user>
+            <user>predict_furniture_trends@00dfj00000cqpba37995207.ext</user>
+            <user>mujuneja@deloitte.com_df</user>
+            <user>nshazia@deloitte.com_df</user>
+            <user>epic.8ff25599a0bb@orgfarm.salesforce.com</user>
+            <user>kpruthviraju@deloitte.com_df</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases_Routing_Configuration</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>MessagingSession</sobjectType>
+    </queueSobject>
+</Queue>

@@ -59,10 +59,6 @@ variables:
     VoiceCallId: linked string
         description: "This variable may also be referred to as Voice Call Id"
         source: @VoiceCall.Id
-    HardCoded_Id: mutable string = "a03fj00001cRMnd"
-        label: "HardCoded_Id"
-    HardCode_Value: mutable string
-        label: "HardCode Value"
 
 language:
     default_locale: "en_US"
