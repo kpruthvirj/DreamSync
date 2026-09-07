@@ -1,7 +1,7 @@
 # DreamSync — Ivy
 
--**Website link** : https://orgfarm-22349fde76.my.site.com/eh/
--**Salesforce Org** : https://orgfarm-22349fde76.lightning.force.com/one/one.app
+- **Website link:** https://orgfarm-22349fde76.my.site.com/eh/
+- **Salesforce Org:** https://orgfarm-22349fde76.lightning.force.com/one/one.app
 
 Where systems meet sustainability.
 
