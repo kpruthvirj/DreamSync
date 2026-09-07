@@ -123,7 +123,7 @@ the same data.
 | Document | What is in it |
 | --- | --- |
 | [DreamSync.pptx](https://github.com/kpruthvirj/DreamSync/blob/main/Hackathon_Sep26_DreamSync.pptx) | Architecture: agent topics, actions, data flows, and why the design choices are what they are |
-| [ACCESSIBILITY.md](https://github.com/kpruthvirj/DreamSync/blob/main/Accessibility_RAI_Trust_Compliance.md) | Accessibility approach, RAI Self-Check details |
+| [Accessibility & RAI Trust Compliance Audit](https://github.com/kpruthvirj/DreamSync/blob/main/Accessibility_RAI_Trust_Compliance.md) | Accessibility approach, RAI Self-Check details |
 | [Ivvy.agent](https://github.com/kpruthvirj/DreamSync/blob/main/force-app/main/default/aiAuthoringBundles/Ivy/Ivy.agent) | Agent Configration |
 | [APEX_Classes ](https://github.com/kpruthvirj/DreamSync/tree/main/force-app/main/default/classes) | Apex classes |
 | [Predictive Model ](https://orgfarm-22349fde76.lightning.force.com/lightning/n/standard-EinsteinStudio?c__assetId=24sfj0000005OMfAAM#eyJkZXRhaWxzVGFiIjoiT1ZFUlZJRVcifQ==) | Predictive Model |
