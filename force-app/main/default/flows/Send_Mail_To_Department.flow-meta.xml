@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>send_email_to_alert</name>
+        <label>send_email_to_alert</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value>
+                <collectionElements>
+                    <elementReference>Department_email</elementReference>
+                </collectionElements>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+                <stringValue>Alert! Carbon Emission Exceeded!</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <inputConfiguratorMode>Custom</inputConfiguratorMode>
+                <stringValue>Dear {!Department_Name}, 
+
+I hope this message finds you well. We wish to bring to your attention that our latest environmental review has identified that the carbon emissions associated with the use of {!Material_Name} in your department currently exceed the established company standards.
+
+What This Means: The use of {!Material_Name} material, as measured in your recent activities, results in higher carbon emissions than what is allowed by or targeted in our corporate sustainability policies. This variance may impact both our sustainability objectives and regulatory compliance. 
+
+Recommended Next Steps: Review procurement use of {!Material_Name} material within your department. Consider alternative materials or process adjustments where feasible to reduce emissions. Collaborate with the Sustainability Team if you need support identifying lower-emission substitutes or process improvements. Our team is available to provide guidance and resources to help you address this situation. 
+
+Please reach out with any questions or if you would like to schedule a consultation. 
+
+Thank you for your prompt attention to this matter and your continued commitment to our sustainability goals. 
+
+Best regards,
+Environment Team</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>3.0.1</versionString>
+    </actionCalls>
+    <apiVersion>67.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assigning_Values</name>
+        <label>Assigning_Values</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>Department_email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Department.Department_Email__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Department_Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Department.Department__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>send_email_to_alert</targetReference>
+        </connector>
+    </assignments>
+    <environments>Default</environments>
+    <interviewLabel>Send_Mail_To_Department {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Send_Mail_To_Department</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Department</name>
+        <label>Get_Department</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assigning_Values</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Material_Name</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Emission_Factor__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Department</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>email of department</description>
+        <name>Department_email</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>name of department</description>
+        <name>Department_Name</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Name of material</description>
+        <name>Material_Name</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
